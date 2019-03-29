@@ -66,11 +66,6 @@ var testUAVars = []struct {
 		UserAgent{
 			Browser{BrowserChrome, Version{45, 0, 2454}}, OS{PlatformMac, OSMacOSX, Version{10, 11, 0}}, DeviceComputer}},
 
-	//TODO: refactor "getVersion()" to handle this device/chrome version douchebaggery
-	// {"Mozilla/5.0 (Linux; Android 4.4.2; en-gb; SAMSUNG SM-G800F Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Version/1.6 Chrome/28.0.1500.94 Mobile Safari/537.36",
-	// 	UserAgent{
-	//		Browser{BrowserChrome, Version{28,0,1500}, OS{PlatformLinux, OSAndroid, Version{4,4,2}}, DevicePhone}},
-
 	// Safari
 	{"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12",
 		UserAgent{
@@ -120,10 +115,6 @@ var testUAVars = []struct {
 			Browser{BrowserOpera, Version{10, 2, 0}}, OS{PlatformiPhone, OSiOS, Version{8, 4, 0}}, DevicePhone}},
 
 	// Internet Explorer -- https://msdn.microsoft.com/en-us/library/hh869301(v=vs.85).aspx
-	{"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.123",
-		UserAgent{
-			Browser{BrowserIE, Version{12, 123, 0}}, OS{PlatformWindows, OSWindows, Version{10, 0, 0}}, DeviceComputer}},
-
 	{"Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)",
 		UserAgent{
 			Browser{BrowserIE, Version{10, 0, 0}}, OS{PlatformWindows, OSWindows, Version{6, 2, 0}}, DeviceComputer}},
@@ -131,10 +122,6 @@ var testUAVars = []struct {
 	{"Mozilla/5.0 (Windows NT 6.3; Trident/7.0; .NET4.0E; .NET4.0C; rv:11.0) like Gecko",
 		UserAgent{
 			Browser{BrowserIE, Version{11, 0, 0}}, OS{PlatformWindows, OSWindows, Version{6, 3, 0}}, DeviceComputer}},
-
-	{"Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.123",
-		UserAgent{
-			Browser{BrowserIE, Version{12, 123, 0}}, OS{PlatformWindowsPhone, OSWindowsPhone, Version{10, 0, 0}}, DevicePhone}},
 
 	{"Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 520) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537",
 		UserAgent{
@@ -164,18 +151,6 @@ var testUAVars = []struct {
 	{"UCWEB/2.0 (Java; U; MIDP-2.0; en-US; MicromaxQ5) U2/1.0.0 UCBrowser/9.4.0.342 U2/1.0.0 Mobile",
 		UserAgent{
 			Browser{BrowserUCBrowser, Version{9, 4, 0}}, OS{PlatformUnknown, OSUnknown, Version{0, 0, 0}}, DevicePhone}},
-
-	// Nokia Browser
-	// {"Mozilla/5.0 (Series40; Nokia501/14.0.4/java_runtime_version=Nokia_Asha_1_2; Profile/MIDP-2.1 Configuration/CLDC-1.1) Gecko/20100401 S40OviBrowser/4.0.0.0.45",
-	// 	UserAgent{
-	//		Browser{BrowserUnknown, Version{4,0,0}}, OS{PlatformUnknown, OSUnknown, Version{0,0,0}}, DevicePhone}},
-
-	// {"Mozilla/5.0 (Symbian/3; Series60/5.3 NokiaN8-00/111.040.1511; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/535.1 (KHTML, like Gecko) NokiaBrowser/8.3.1.4 Mobile Safari/535.1",
-	// 	UserAgent{
-	//		Browser{BrowserUnknown, Version{8,0,0}}, OS{PlatformUnknown, OSUnknown, Version{0,0,0}}, DevicePhone}},
-
-	// {"NokiaN97/21.1.107 (SymbianOS/9.4; Series60/5.0 Mozilla/5.0; Profile/MIDP-2.1 Configuration/CLDC-1.1) AppleWebkit/525 (KHTML, like Gecko) BrowserNG/7.1.4",
-	// 	BrowserUnknown, Version{7,0,0}}, OS{PlatformUnknown, OSUnknown, Version{0,0,0}}, DevicePhone}},
 
 	// ChromeOS
 	{"Mozilla/5.0 (X11; U; CrOS i686 9.10.0; en-US) AppleWebKit/532.5 (KHTML, like Gecko) Chrome/4.0.253.0 Safari/532.5",
@@ -257,11 +232,6 @@ var testUAVars = []struct {
 		UserAgent{
 			Browser{BrowserChrome, Version{34, 0, 0}}, OS{PlatformLinux, OSKindle, Version{4, 4, 3}}, DeviceTablet}}, // Fire tablet running pinterest
 
-	// extra logic to identify phone when using silk has not been added
-	// {"Mozilla/5.0 (Linux; Android 4.4.4; SD4930UR Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Silk/3.67 like Chrome/39.0.2171.93 Mobile Safari/537.36",
-	// 	UserAgent{
-	//		Browser{BrowserSilk, Version{3,0,0}}, OS{PlatformLinux, OSKindle, Version{4,0,0}}, DevicePhone}}, // Silk on Fire Phone
-
 	// Nintendo
 	{"Opera/9.30 (Nintendo Wii; U; ; 2047-7; fr)",
 		UserAgent{
@@ -309,10 +279,6 @@ var testUAVars = []struct {
 	{"Mozilla/5.0 (X11; FreeBSD; U; Viera; de-DE) AppleWebKit/537.11 (KHTML, like Gecko) Viera/3.10.0 Chrome/23.0.1271.97 Safari/537.11", // Panasonic Viera
 		UserAgent{
 			Browser{BrowserChrome, Version{23, 0, 1271}}, OS{PlatformLinux, OSLinux, Version{0, 0, 0}}, DeviceTV}},
-
-	// TODO: not catching "browser/" and reporting as safari -- ua string not being fully checked?
-	// {"Mozilla/5.0 (DTV) AppleWebKit/531.2+ (KHTML, like Gecko) Espial/6.1.5 AQUOSBrowser/2.0 (US01DTV;V;0001;0001)", // Sharp Aquos
-	// 	BrowserUnknown, Version{0,0,0}}, OS{PlatformUnknown, OSUnknown, Version{0,0,0}}, DeviceTV}},
 
 	{"Roku/DVP-5.2 (025.02E03197A)", // Roku
 		UserAgent{
