@@ -56,6 +56,7 @@ const (
 	BrowserSamsung
 	BrowserYandex
 	BrowserCocCoc
+	BrowserNetscape
 	BrowserBot // Bot list begins here
 	BrowserAppleBot
 	BrowserBaiduBot

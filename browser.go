@@ -91,6 +91,9 @@ func (u *UserAgent) evalBrowserName(ua string) bool {
 		case strings.Contains(ua, " gsa/"):
 			u.Browser.Name = BrowserSafari
 
+		case strings.Contains(ua, " netscape/"):
+			u.Browser.Name = BrowserNetscape
+
 		default:
 			goto notwebkit
 
@@ -102,6 +105,9 @@ notwebkit:
 	switch {
 	case strings.Contains(ua, "qq/") || strings.Contains(ua, "qqbrowser/"):
 		u.Browser.Name = BrowserQQ
+
+	case strings.Contains(ua, " netscape/"):
+		u.Browser.Name = BrowserNetscape
 
 	case strings.Contains(ua, "msie") || strings.Contains(ua, "trident"):
 		u.Browser.Name = BrowserIE
